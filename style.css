@@ -316,6 +316,18 @@ body, html {
     transform: translateY(-3px);
 }
 
+.skill-topic {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.skill-topic:hover {
+    border-color: #00ffdd;
+    box-shadow: 0 0 10px rgba(0, 255, 221, 0.3);
+}
+
 .experience-container, .education-container {
     display: flex;
     gap: 2rem;
@@ -332,6 +344,16 @@ h1, h2, h3 {
     letter-spacing: 0.05em;
 }
 
+@keyframes text-flicker {
+    0% { text-shadow: 0 0 15px #00ffdd; }
+    50% { text-shadow: 0 0 25px #00ffdd; }
+    100% { text-shadow: 0 0 15px #00ffdd; }
+}
+
+.animated-text {
+    animation: text-flicker 2s infinite;
+}
+
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -345,6 +367,7 @@ h2 {
 h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    animation: text-flicker 2s infinite;
 }
 
 .content {
